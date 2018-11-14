@@ -16,10 +16,12 @@
 from __future__ import print_function
 from insertion_sort import insertion_sort
 import math
+from datetime import datime
 
 DEFAULT_BUCKET_SIZE = 5
 
 def bucket_sort(myList, bucketSize=DEFAULT_BUCKET_SIZE):
+    begin = datetime.now()
     if(len(myList) == 0):
         print('You don\'t have any elements in array!')
 
@@ -50,7 +52,7 @@ def bucket_sort(myList, bucketSize=DEFAULT_BUCKET_SIZE):
         for j in range(0, len(buckets[i])):
             sortedArray.append(buckets[i][j])
 
-    return sortedArray
+    return sortedArray, (datetime.now()-begin).total_seconds()
 
 if __name__ == '__main__':
     sortedArray = bucket_sort([12, 23, 4, 5, 3, 2, 12, 81, 56, 95])
