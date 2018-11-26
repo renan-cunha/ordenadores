@@ -16,7 +16,7 @@
 from __future__ import print_function
 from insertion_sort import insertion_sort
 import math
-from datetime import datime
+from datetime import datetime
 
 DEFAULT_BUCKET_SIZE = 5
 
