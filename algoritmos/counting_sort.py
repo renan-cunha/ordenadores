@@ -7,8 +7,8 @@ python3 -m doctest -v counting_sort.py
 For manual testing run:
 python counting_sort.py
 """
-
 from __future__ import print_function
+from datetime import datetime
 
 
 def counting_sort(collection):
@@ -24,6 +24,7 @@ def counting_sort(collection):
     >>> counting_sort([-2, -5, -45])
     [-45, -5, -2]
     """
+    begin = datetime.now()
     # if the collection is empty, returns empty
     if collection == []:
         return []
@@ -55,7 +56,7 @@ def counting_sort(collection):
         ordered[counting_arr[collection[i] - coll_min]-1] = collection[i]
         counting_arr[collection[i] - coll_min] -= 1
 
-    return ordered
+    return ordered, (datetime.now()-begin).total_seconds()
 
 def counting_sort_string(string):
     return ''.join([chr(i) for i in counting_sort([ord(c) for c in string])])
