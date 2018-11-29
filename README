@@ -3,10 +3,14 @@ Universidade Federal do Pará
 Ciência da Computação - Graduação
 Disciplina: Análise de Algoritmos
 
-Para usar os algoritmos de ordenação faça
+Integrantes: 
+João Canavarro
+Renan Cunha
+Ronaldd Pinho
+Wagner Felidré
 
-import sys
-sys.path.append("algoritmos/")
+O trabalho com menos código consta no arquivo <trabalho.html>
 
-import <nome>_sort
-<nome>_sort.<nome>_sort(vetor)
+O trabalho com código das funções necessárias para analisar os algoritmos consta no arquivo <trabalho_codigo_completo.ipynb>, esse arquivo pode ser visulizado online por meio do link https://colab.research.google.com/
+
+O código dos algoritmos de ordenação consta no diretório <algoritmos>
